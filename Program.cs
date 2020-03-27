@@ -67,6 +67,13 @@ namespace Day_4
                 Console.WriteLine("Числа расположены по возрастанию!");
             }
             ///////////////////////////////////////////////
+
+            //Task 3...
+            Console.WriteLine("Task 3...");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            ///////////////////////////////////////////////
         }
     }
 }
