@@ -23,7 +23,7 @@ namespace Day_4
                 _discountStr = "5-ти";
             }
             
-            if(_discount > 500)
+            if(_pay > 500)
                 Console.WriteLine($"Итог с {_discountStr} процентной скидкой: " + (_pay * _discount) / 100);
             else
                 Console.WriteLine($"Покупка на сумму {_pay} не предоставляет скидки!");
