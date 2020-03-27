@@ -30,7 +30,11 @@ namespace Day_4
             ////////////////////////////////////////////////
 
             //Task 2...
-
+            Console.WriteLine("Task 2...");
+            int A = int.Parse(Console.ReadLine());
+            int B = int.Parse(Console.ReadLine());
+            int C = int.Parse(Console.ReadLine());
+            int D = int.Parse(Console.ReadLine());
             ///////////////////////////////////////////////
         }
     }
