@@ -73,6 +73,26 @@ namespace Day_4
             int a = int.Parse(Console.ReadLine());
             int b = int.Parse(Console.ReadLine());
             int c = int.Parse(Console.ReadLine());
+            int xtemp = 0;
+            if(!(a >= b && b >= c))
+            {
+                if(b >= a)
+                {
+                    xtemp = b;
+                    b = a;
+                    a = xtemp;
+                }
+
+                if(c >= b)
+                {
+                    xtemp = c;
+                    c = b;
+                    b = xtemp;
+                }
+                Console.WriteLine($"a >= b >= c ({a} >= {b} >= {c})");
+            }
+            else
+                Console.WriteLine($"a >= b >= c ({a} >= {b} >= {c})");
             ///////////////////////////////////////////////
         }
     }
