@@ -23,8 +23,12 @@ namespace Day_4
                 _discountStr = "5-ти";
             }
             
-            Console.WriteLin($"Итог с {_discountStr} процентной скидкой: " + (_pay * _discount) / 100);
+            Console.WriteLine($"Итог с {_discountStr} процентной скидкой: " + (_pay * _discount) / 100);
             ////////////////////////////////////////////////
+
+            //Task 2...
+
+            ///////////////////////////////////////////////
         }
     }
 }
