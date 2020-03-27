@@ -35,7 +35,7 @@ namespace Day_4
             int B = int.Parse(Console.ReadLine());
             int C = int.Parse(Console.ReadLine());
             int D = int.Parse(Console.ReadLine());
-            if((A < B && B < C && C < D) == false)
+            if(!(A < B && B < C && C < D) && !(A == B && B == C && C == D))
             {
                 Console.WriteLine("Числа не расположены по возрастанию!");
                 if(A < B && A < C && A < D)
@@ -58,11 +58,11 @@ namespace Day_4
                     Console.WriteLine("Наименьшее Число: " + D);
                 }
             }
-            else if(A == B && B == C && C == D)
+            if(A == B && B == C && C == D)
             {
                 Console.WriteLine("Числа равны, их произведение " + (A * B * C * D));
             }
-            else if(A < B && B < C && C < D)
+            if(A < B && B < C && C < D)
             {
                 Console.WriteLine("Числа расположены по возрастанию!");
             }
