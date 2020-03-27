@@ -12,7 +12,7 @@ namespace Day_4
             decimal _pay = Convert.ToDecimal(Console.ReadLine()); //Сумма покупки
             decimal _discount = 0m; //Скидка
             string _discountStr = "";
-            if(_pay > 500)
+            if(_pay >= 500 && _pay <= 1000)
             {
                 _discount = 3m;
                 _discountStr = "3-х";
@@ -24,7 +24,7 @@ namespace Day_4
             }
             
             if(_pay > 500)
-                Console.WriteLine($"Итог с {_discountStr} процентной скидкой: " + (_pay * _discount) / 100);
+                Console.WriteLine($"Итог с {_discountStr} процентной скидкой: " + (_pay - ((_pay * _discount) / 100)));
             else
                 Console.WriteLine($"Покупка на сумму {_pay} не предоставляет скидки!");
             ////////////////////////////////////////////////
