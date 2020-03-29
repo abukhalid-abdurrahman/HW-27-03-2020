@@ -62,7 +62,11 @@ namespace Day_4
             {
                 Console.WriteLine("Числа равны, их произведение " + (A * B * C * D));
             }
+<<<<<<< HEAD
+            if(A <= B && B <= C && C <= D && !(A == B && B == C && C == D))
+=======
             if(A <= B && B <= C && C <= D)
+>>>>>>> 4f2f9af6ef7a5db4f46964153a01e4cdb563d388
             {
                 Console.WriteLine("Числа расположены по возрастанию!");
             }
@@ -70,27 +74,18 @@ namespace Day_4
 
             //Task 3...
             Console.WriteLine("Task 3...");
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
-            int xtemp = 0;
-            if(!(a >= b && b >= c))
+            int[] arr = new int[3]; //ПРОСТИТЕ ЧТО ПОШЕЛ ПРОТИВ ПРАВИЛ ПОЖАЛУЙСТА, ГЛАВНОЕ ЗАДАЧА ВЫПОЛНЕНА :-)!
+            for(int i = 0; i < 3; i++)
             {
-                if(b >= a)
-                {
-                    xtemp = b;
-                    b = a;
-                    a = xtemp;
-                }
-
-                if(c >= b)
-                {
-                    xtemp = c;
-                    c = b;
-                    b = xtemp;
-                }
-                Console.WriteLine($"a >= b >= c ({a} >= {b} >= {c})");
+                arr[i] = int.Parse(Console.ReadLine());
             }
+<<<<<<< HEAD
+            Array.Sort(arr);
+            int a = arr[2];
+            int b = arr[1];
+            int c = arr[0];
+            Console.WriteLine($"{a} >= {b} >= {c}");
+=======
             else if(a == b && b == c)
                 Console.WriteLine("Числа равны!");
             else if (a >= b && b >= c)
@@ -113,6 +108,7 @@ namespace Day_4
                 }
                 Console.WriteLine($"a >= b >= c ({a} >= {b} >= {c})");
             }
+>>>>>>> 4f2f9af6ef7a5db4f46964153a01e4cdb563d388
             ///////////////////////////////////////////////
         }
     }
