@@ -35,7 +35,7 @@ namespace Day_4
             int B = int.Parse(Console.ReadLine());
             int C = int.Parse(Console.ReadLine());
             int D = int.Parse(Console.ReadLine());
-            if(!(A < B && B < C && C < D) && !(A == B && B == C && C == D))
+            if(!(A <= B && B <= C && C <= D) && !(A == B && B == C && C == D))
             {
                 Console.WriteLine("Числа не расположены по возрастанию!");
                 if(A < B && A < C && A < D)
@@ -62,7 +62,7 @@ namespace Day_4
             {
                 Console.WriteLine("Числа равны, их произведение " + (A * B * C * D));
             }
-            if(A < B && B < C && C < D)
+            if(A <= B && B <= C && C <= D)
             {
                 Console.WriteLine("Числа расположены по возрастанию!");
             }
@@ -91,8 +91,28 @@ namespace Day_4
                 }
                 Console.WriteLine($"a >= b >= c ({a} >= {b} >= {c})");
             }
-            else
+            else if(a == b && b == c)
+                Console.WriteLine("Числа равны!");
+            else if (a >= b && b >= c)
                 Console.WriteLine($"a >= b >= c ({a} >= {b} >= {c})");
+            else
+            {
+                if(a > b && a > c)
+                    a = a;
+                if(b > a && b > c)
+                {
+                    xtemp = b;
+                    b = a;
+                    a = xtemp;
+                }
+                if(c > b && c > a)
+                {
+                    xtemp = c;
+                    c = a;
+                    a = xtemp;
+                }
+                Console.WriteLine($"a >= b >= c ({a} >= {b} >= {c})");
+            }
             ///////////////////////////////////////////////
         }
     }
