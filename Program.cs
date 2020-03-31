@@ -70,16 +70,21 @@ namespace Day_4
 
             //Task 3...
             Console.WriteLine("Task 3...");
-            int[] arr = new int[3]; //ПРОСТИТЕ ЧТО ПОШЕЛ ПРОТИВ ПРАВИЛ ПОЖАЛУЙСТА, ГЛАВНОЕ ЗАДАЧА ВЫПОЛНЕНА :-)!
-            for(int i = 0; i < 3; i++)
-            {
-                arr[i] = int.Parse(Console.ReadLine());
-            }
-            Array.Sort(arr);
-            int a = arr[2];
-            int b = arr[1];
-            int c = arr[0];
-            Console.WriteLine($"{a} >= {b} >= {c}");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            if((a>=b)&&(b>=c))
+                Console.WriteLine($"{a} >= {b} >= {c}");
+            else if((b >= a) && (a >= c))
+                Console.WriteLine($"{b} >= {a} >= {c}");
+            else if((a >= c) && (c >= b))
+                Console.WriteLine($"{a} >= {c} >= {b}");
+            else if((b > c) && (c > a))
+                Console.WriteLine($"{b} >= {c} >= {a}");
+            else if((c >= a) && (a >= b))
+                Console.WriteLine($"{c} >= {a} >= {b}");
+            else
+                Console.WriteLine($"{c} >= {b} >= {a}");
             ////////////////////////////////////////////////
         }
     }
